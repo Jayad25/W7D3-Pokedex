@@ -5,6 +5,8 @@ class Api::PokemonController < ApplicationController
     render :index
   end
   
-  def create
+  def show
+    @pokemon = Pokemon.find(params[:id])
+    render :show
   end
 end

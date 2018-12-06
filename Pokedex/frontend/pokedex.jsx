@@ -5,9 +5,10 @@ import { fetchAllPokemon } from './util/api_util';
 
 
 
-window.receiveAllPokemon=receiveAllPokemon;
+
 document.addEventListener("DOMContentLoaded",()=>{
-  
+  window.receiveAllPokemon=receiveAllPokemon;
+  window.fetchAllPokemon=fetchAllPokemon;
   const rootEl = document.getElementById('root');
   ReactDOM.render(<h1>Pokedex</h1>, rootEl);
 });

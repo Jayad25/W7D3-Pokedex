@@ -1,9 +1,9 @@
-import { RECEIVE_POKEMON } from '../actions/pokemon_actions';
+import { RECEIVE_SINGLE_POKEMON } from '../actions/pokemon_actions';
 
 const itemsReducer = (state = {}, action) =>{
 
   switch (action.type) {
-    case RECEIVE_POKEMON:
+    case RECEIVE_SINGLE_POKEMON:
       let items = action.pokemon.items;
       return Object.assign({}, state, items );
     default:

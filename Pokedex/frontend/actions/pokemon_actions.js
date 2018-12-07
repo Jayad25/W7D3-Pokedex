@@ -2,7 +2,7 @@
 import * as APIUtil from '../util/api_util';
 
 export const RECEIVE_ALL_POKEMON = 'RECEIVE_ALL_POKEMON';
-export const RECEIVE_POKEMON = 'RECEIVE_POKEMON';
+export const RECEIVE_SINGLE_POKEMON = 'RECEIVE_SINGLE_POKEMON';
 
 
 export const receiveAllPokemon = pokemon =>({
@@ -16,12 +16,12 @@ export const requestAllPokemon = () => (dispatch) => (
 );
 
 
-export const receivePokemon = pokemon =>({
-  type: RECEIVE_POKEMON,
+export const receivesinglePokemon = pokemon =>({
+  type: RECEIVE_SINGLE_POKEMON,
   pokemon
 });
 
-export const requestPokemon = (id) => (dispatch) => (
+export const requestSinglePokemon = (id) => (dispatch) => (
   APIUtil.fetchPokemon(id)
     .then(pokemon => dispatch(receivePokemon(pokemon)))
 );

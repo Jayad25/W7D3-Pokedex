@@ -10,6 +10,7 @@ import { HashRouter, Route} from 'react-router-dom';
 document.addEventListener("DOMContentLoaded",()=>{
   window.requestAllPokemon=requestAllPokemon;
   const store = configureStore();
+  window.store = store;
   const rootEl = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, rootEl);
 });

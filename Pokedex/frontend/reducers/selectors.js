@@ -1,8 +1,6 @@
 // const initialState = getState();
-const selectAllPokemon = (state) =>(
+export const selectAllPokemon = (state) =>(
 
 Object.values(state.entities.pokemon)
 
 );
-
-export default selectAllPokemon;
